@@ -5,7 +5,6 @@ import { AiOutlineMenu, AiOutlineSearch, AiOutlineHeart } from "react-icons/ai";
 import { IoMdHome } from "react-icons/io";
 import { MdOutlineExplore, MdOutlineAddBox } from "react-icons/md";
 import { RiMessengerLine } from "react-icons/ri";
-import img2 from "../../assets/img2.jpg";
 
 const Navbar = () => {
   return (
@@ -43,7 +42,7 @@ const Navbar = () => {
           </a>
           <a href="/profile">
             <div className="profile ">
-              <img src={img2} alt="profile" className="profile-img nav-icon" />
+              <img src='./assets/img2.jpg' alt="profile" className="profile-img nav-icon" />
               <span className="nav-item">Profile</span>
             </div>
           </a>

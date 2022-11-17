@@ -5,7 +5,6 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { FaRegComment } from "react-icons/fa";
 import { TbSend } from "react-icons/tb";
 import Profile from "../profile/Proifle";
-import post1 from '../../assets/post1.jpg'
 
 const Hero = () => {
   return (
@@ -16,7 +15,7 @@ const Hero = () => {
           <div className="single-post">
             <Profile name="name" />
             <div className="post-content">
-              <img src={post1} className='post-image' alt="" />
+              <img src='./assets/post1.jpg' className='post-image' alt="" />
               <div className="post-details">
                 <div className="post-likes">
                   <AiOutlineHeart className="post-icons" />

@@ -10,8 +10,7 @@ const Stories = () => {
           return (
             <article key={item.id} className="story-single">
               <div className="image-wrap">
-                {" "}
-                <img src={item.cover} alt="post first" className="story-img" />
+                <img src={`./assets/${item.cover}`} alt="post first" className="story-img" />
               </div>
               <small className="story-userName">{item.name}</small>
             </article>
