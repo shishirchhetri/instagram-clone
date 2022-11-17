@@ -1,0 +1,77 @@
+.nav-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 250px;
+    border-right:1px solid silver ;
+}
+
+.nav-links{
+    padding: 1.2rem 0.7rem;
+}
+.nav-links a{
+    display: flex;
+    padding: 1.3rem 0.9rem;
+}
+.nav-logo-name{
+    display: flex;
+    padding: 2rem 0;
+    padding-left: 1.6rem;
+}
+.nav-logo{
+    position: absolute;
+    top: 2rem;
+    font-size: 1.4rem;
+    display: none;
+}
+
+.logo-name{
+    font-size: 1.5rem;
+}
+
+.nav-icon{
+    font-size: 1.6rem;
+    margin-right: 1rem;
+    margin-top: 0rem;
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+.profile-img{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+
+.nav-end{
+    position: absolute;
+    bottom: 4rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width:1024px){
+  .nav-container{
+    width: 80px;
+  }
+  .logo-name{
+    display: none;
+  }
+  .nav-links a{
+    padding: 1.3rem 0;
+    justify-content: center;
+  }
+
+  .nav-item{
+    display: none;
+  }
+  .nav-icon{
+    margin: 0;
+  }
+  .nav-logo{
+    display: block;
+    
+  }
+}

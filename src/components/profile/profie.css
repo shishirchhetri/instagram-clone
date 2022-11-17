@@ -1,0 +1,26 @@
+.profile-story-single{
+    display: flex;
+    align-items: center;
+}
+.profile-image-wrap{
+    padding: 2px ;
+    background:var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.profile-story-img{
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    border:2px solid var(--border);
+    margin:0.001rem;
+}
+
+.profile-story-userName{
+    opacity: 0.8;
+    margin-left: 0.8rem;
+}
