@@ -5,9 +5,11 @@ const Profile = (props) => {
   return (
         <article className="profile-story-single">
           <div className="profile-image-wrap">
-            <img src='./assets/post1.jpg' alt="post first" className="profile-story-img" />
+            <img src={`./assets/${props.img}`} alt="post first" className="profile-story-img" />
           </div>
-          <small className="profile-story-userName">{props.name}</small>
+          <div className="profile-story-userName-details">
+            <strong className="profile-story-userName ">{props.name}</strong>
+            <small className="light">{props.user_details}</small></div>
         </article>
   );
 };

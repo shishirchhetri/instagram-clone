@@ -3,8 +3,9 @@
 *{
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
+    margin: 0 ;
     font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
 }
 
 :root{
@@ -16,6 +17,10 @@
 
 
 }
+body{
+    background: var(--primary-varient);
+}
+
 ul{
     list-style: none;
     justify-content: center;
@@ -23,6 +28,10 @@ ul{
 a{
     text-decoration: none;
     color: #262626;
+}
+strong{
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
 
 .light{

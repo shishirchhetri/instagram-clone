@@ -1,14 +1,14 @@
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
-import Profile from "./components/profile/Proifle";
+import Login from "./pages/Login";
 
 
 function App() {
   return (
-    <>
-  {/* <Navbar/> */}
-  <Hero />
-    </>
+    <div className="App">
+      <Navbar />
+      <Hero />
+    </div>
   );
 }
 

@@ -9,18 +9,26 @@
     display: flex;
     align-items: center;
     width: fit-content;
+    height: 46px;
+    width: 46px;
+    justify-content: center;
 }
 
 .profile-story-img{
     aspect-ratio: 1/1;
     border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    border:2px solid var(--border);
+    height: 42px;
+    width: 42px;
+    border:2px solid white;
     margin:0.001rem;
 }
-
-.profile-story-userName{
-    opacity: 0.8;
-    margin-left: 0.8rem;
+.profile-story-userName-details{
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.5rem ;
+    justify-content: left;
 }
+.profile-story-userName-details small.light{
+    opacity: 0.4;
+}
+

@@ -2,12 +2,20 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
+    overflow: hidden;
     width: 250px;
     border-right:1px solid silver ;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background: var(--primary);
 }
 
 .nav-links{
     padding: 1.2rem 0.7rem;
+    display:flex;
+    flex-direction: column;
 }
 .nav-links a{
     display: flex;
@@ -20,7 +28,7 @@
 }
 .nav-logo{
     position: absolute;
-    top: 2rem;
+    top: 2.5rem;
     font-size: 1.4rem;
     display: none;
 }
@@ -29,19 +37,21 @@
     font-size: 1.5rem;
 }
 
-.nav-icon{
-    font-size: 1.6rem;
+.nav-links .nav-icon{
+    font-size: 1.7rem;
     margin-right: 1rem;
-    margin-top: 0rem;
+    margin-top: -0.3rem;
 }
 .profile{
     display: flex;
     align-items: center;
 }
+
 .profile-img{
     border-radius: 50%;
-    height: 30px;
-    width: 30px;
+    height: 44px;
+    width: 44px;
+    border: 2px solid red;
 }
 
 .nav-end{
@@ -50,9 +60,10 @@
     left: 2rem;
     display: flex;
     align-items: center;
+    gap: 1rem;
 }
 
-@media screen and (max-width:1024px){
+@media screen and (max-width:1100px){
   .nav-container{
     width: 80px;
   }
@@ -74,4 +85,56 @@
     display: block;
     
   }
+}
+
+@media screen and (max-width:600px){
+ .nav-container{
+  position: fixed;
+  top: 92%; 
+  left:0 ;
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  z-index: 10;
+  background-color: green;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+}
+.nav-sidebar{
+  width: 90%;
+  margin: auto;
+}
+
+.nav-links{
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; */
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 1rem;
+  background-color: red;
+  margin: 0 1rem;
+}
+
+.nav-links a{
+align-items: center;
+padding: 0;
+margin: 0;
+width: 100%;
+}
+
+.small-nav-show{
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+.nav-end, #search, #notification, .nav-icon.small-nav, .nav-logo-name{
+  display: none;
+}
+
 }
