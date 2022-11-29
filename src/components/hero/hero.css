@@ -128,12 +128,12 @@ padding: 0.37rem;
 
 /*-----------------------------Sidebar-------------------------*/
 .post-sidebar{
-    width: 260px;
+    width: 290px;
     margin-top: 6rem;
     display: flex;
     flex-direction:column;
     justify-content: space-between;
-    padding: 1rem 0;
+    padding: 1rem ;
 
 }
 .sidebar-profile{
@@ -173,8 +173,9 @@ padding: 0.37rem;
 
 @media screen and (max-width:600px){
     .hero-container{
-        margin-bottom: 60px;
+        margin-bottom: 9vh;
         margin-left: 0;
+        margin-top: 8vh;
     }
     .posts{
         max-width: 400px;

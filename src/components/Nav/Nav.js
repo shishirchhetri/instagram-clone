@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import "./nav.css";
 import { BsInstagram } from "react-icons/bs";
 import { AiOutlineHome } from "react-icons/ai";
@@ -6,7 +6,6 @@ import { AiOutlineMenu, AiOutlineHeart } from "react-icons/ai";
 import { MdOutlineExplore, MdOutlineAddBox } from "react-icons/md";
 import { RiMessengerLine } from "react-icons/ri";
 import { GoSearch } from "react-icons/go";
-import Profile from "../profile/Proifle";
 
 const Nav = () => {
   const [active, setActive] = useState(false);
@@ -17,13 +16,38 @@ const Nav = () => {
   }
 
   return (
+<div className="sidebar-container">
+
+
+    <div className="nav-mobile">
+          <div className="nav-mobile-logo">
+            <h2>Instagram</h2>
+          </div>
+
+          <div className="nav-mobile-icons">
+          <div className="nav-mobile-search">
+            <input className="mobile-search" type="text" id="mobile-search" placeholder="search..." />
+            <label htmlFor="mobile-search"><GoSearch className="mobile-search-icon" /></label>
+          </div>
+    <div className="nav-mobile-notification">
+    <AiOutlineHeart className="mobile-notification-icon" />
+    </div>
+          </div>
+
+        </div>
+
+
     <div id="sidebar">
       <div className="logo">
         <BsInstagram className="logo-img" />
         <h3>InstaGram</h3>
+
+        
       </div>
+      
 
       <nav>
+        
         <ul className="nav-items">
           <li
             className={`${active ? "nav-item active" : "nav-item"}`}
@@ -34,7 +58,7 @@ const Nav = () => {
               <span>Home</span>
             </a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item mini-nav">
             <a href="#search">
               <GoSearch className="nav-item-icon" />
               <span>Search</span>
@@ -55,6 +79,7 @@ const Nav = () => {
             </a>
           </li>
 
+          
           <li
             className={`${
               link === "#messages" ? "nav-item active" : "nav-item"
@@ -70,8 +95,8 @@ const Nav = () => {
               <span>Messenges</span>
             </a>
           </li>
-          <li className="nav-item">
-            <a href="#nitification">
+          <li   className="nav-item mini-nav">
+            <a href="#notification">
               <AiOutlineHeart className="nav-item-icon" />
               <span>Notification</span>
             </a>
@@ -83,10 +108,15 @@ const Nav = () => {
             </a>
           </li>
 
-          <li className="nav-item">
-            <a href="#create">
-              <Profile img='img2.jpg'/> <span>Profile</span>
-            </a>
+          <li className="nav-item nav-item-profile">
+          <div className="profile ">
+                <img
+                  src="./assets/img2.jpg"
+                  alt="profile"
+                  className="profile-img nav-icon"
+                />
+                <span className="nav-item">Profile</span>
+                </div>
           </li>
         </ul>
 
@@ -98,6 +128,7 @@ const Nav = () => {
           </li>
         </ul>
       </nav>
+    </div>
     </div>
   );
 };
