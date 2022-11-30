@@ -37,8 +37,8 @@ const Hero = () => {
                 </div>
                 <div className="post-caption">
                   <p>
-                    <strong>{post.userName}</strong>
-                    <span className="caption-text">{post.caption}</span>
+                    <strong> {post.userName}</strong>
+                    <span className="caption-text"> {post.caption}</span>
                   </p>
                 </div>
 

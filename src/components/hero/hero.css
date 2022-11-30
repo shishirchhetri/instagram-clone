@@ -73,7 +73,6 @@ padding: 0.37rem;
     width: 100%;
     margin: 1rem;
     background: var(--primary-varient);
-    margin: 0 1rem;
 }
 
 
@@ -120,9 +119,7 @@ padding: 0.37rem;
 }
 
 .post-caption p{
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
+   margin-left: 1rem;
 }
 
 
