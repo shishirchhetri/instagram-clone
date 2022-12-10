@@ -84,11 +84,11 @@ a{
 }
 
 #sidebar nav .nav-item.active {
-    background: #ff328e !important;
+    background: #eeeaec !important;
 }
 
 #sidebar nav .nav-item:hover {
-    background: rgba(255, 255, 255, .1);
+    background: rgba(128, 126, 126, 0.1);
 }
 
 #sidebar nav .nav-item i {
@@ -176,14 +176,13 @@ a{
 @media screen and (max-width:600px){
 #sidebar{
     height: 10vh;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    width: 100vw;
     transform: translateY(90vh);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    border: none;
+    box-shadow: none;
 }
 
 #sidebar .logo, #sidebar .sidebar-end{
@@ -194,9 +193,6 @@ a{
 #sidebar .nav-items{
     display: flex;
     flex-direction: row;
-    /* position: fixed;
-    bottom: 0;
-    left: 0; */
     justify-content: space-around;
     width: 100%;
 }

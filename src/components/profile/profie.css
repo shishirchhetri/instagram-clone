@@ -1,7 +1,9 @@
 .profile-story-single{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
+
 .profile-image-wrap{
     padding: 2px ;
     background:var(--border);

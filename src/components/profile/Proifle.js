@@ -1,6 +1,7 @@
 import React from "react";
 import './profie.css'
 
+
 const Profile = (props) => {
   return (
         <article className="profile-story-single">

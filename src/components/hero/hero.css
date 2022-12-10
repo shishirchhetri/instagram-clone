@@ -19,7 +19,9 @@ section.hero{
     align-items: center;
     justify-content: flex-start;
     margin: 1rem auto;
+    position: relative;
     overflow: hidden;
+
 }
 
 .story-profiles{
@@ -29,9 +31,16 @@ section.hero{
     align-items: center;
     padding: 0.6rem 0;
 }
-.story-profiles:nth-child(last){
-    margin-right: 0;
-    padding-right: 0;
+
+.stories-arrow{
+    position: absolute;
+    top: 45%;
+    right: 0;
+    background-color: rgba(251, 247, 247,0.3);
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+
 }
 
 .story-single{

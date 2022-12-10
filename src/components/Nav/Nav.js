@@ -6,14 +6,15 @@ import { AiOutlineMenu, AiOutlineHeart } from "react-icons/ai";
 import { MdOutlineExplore, MdOutlineAddBox } from "react-icons/md";
 import { RiMessengerLine } from "react-icons/ri";
 import { GoSearch } from "react-icons/go";
+import Message from "../message/Message";
+import {Link } from 'react-router-dom'
+
 
 const Nav = () => {
-  const [active, setActive] = useState(false);
-  const [link, setLink] = useState("#");
+  const [active, setActive] = useState('home');
 
-  function activeNav() {
-    setActive((pre) => !pre);
-  }
+  
+  
 
   return (
 <div className="sidebar-container">
@@ -50,62 +51,68 @@ const Nav = () => {
         
         <ul className="nav-items">
           <li
-            className={`${active ? "nav-item active" : "nav-item"}`}
-            onClick={activeNav}
+            className={`${active === 'home'? "nav-item active" : "nav-item"}`}
+            onClick={()=> setActive('home')}
           >
-            <a href="# ">
+            <Link to="/">
               <AiOutlineHome className="nav-item-icon" />
               <span>Home</span>
-            </a>
+            </Link>
           </li>
-          <li className="nav-item mini-nav">
-            <a href="#search">
+
+
+          <li className={`${active === 'search'? "nav-item active mini-nav" : "nav-item mini-nav"}`}
+            onClick={()=> setActive('search')}>
+            <Link to="/search">
               <GoSearch className="nav-item-icon" />
               <span>Search</span>
-            </a>
+            </Link>
           </li>
+
           <li
             className={`${
-              link === "#explore" ? "nav-item active" : "nav-item"
+              active === "explore" ? "nav-item active" : "nav-item"
             }`}
             onClick={() => {
-              activeNav();
-              setLink("#explore");
+              setActive("explore");
             }}
           >
-            <a href="#explore">
+            <Link to="/explore">
               <MdOutlineExplore className="nav-item-icon" />
               <span>Explore</span>
-            </a>
+            </Link>
           </li>
 
           
-          <li
+          <li 
             className={`${
-              link === "#messages" ? "nav-item active" : "nav-item"
+              active === "messages" ? "nav-item active " : "nav-item "
             }`}
             onClick={() => {
-              activeNav();
-              setLink("#messages");
+              setActive("messages");
+              return <Message/>
             }}
           >
-            <a href="#messages">
-              {" "}
+            <Link to="/messages">
               <RiMessengerLine className="nav-item-icon" />
-              <span>Messenges</span>
-            </a>
+              <span>Messages</span>
+            </Link>
           </li>
-          <li   className="nav-item mini-nav">
-            <a href="#notification">
+          <li className={`${active === 'notification'? "nav-item active mini-nav" : "nav-item mini-nav"}`}
+            onClick={()=>{
+              setActive('notification');
+            } }>
+            <Link href="/notification">
               <AiOutlineHeart className="nav-item-icon" />
               <span>Notification</span>
-            </a>
+            </Link>
           </li>
-          <li className="nav-item">
-            <a href="#create">
+          <li className={`${active === 'create'? "nav-item active" : "nav-item"}`}
+            onClick={()=> setActive('create')}>
+            <Link href="/create">
               <MdOutlineAddBox className="nav-item-icon" />
               <span>Create</span>
-            </a>
+            </Link>
           </li>
 
           <li className="nav-item nav-item-profile">

@@ -6,10 +6,16 @@ import { FaRegComment } from "react-icons/fa";
 import { TbSend } from "react-icons/tb";
 import Profile from "../profile/Proifle";
 import Footer from "../footer/Footer";
+import Fade from 'react-reveal/Fade';
+import ProgressiveImg from '../../ProgressiveImg';
+
 const module = require('./postData.js');
 const posts = module.posts;
 
+
+
 const Hero = () => {
+
   return (
     <main className="hero-container">
       
@@ -19,11 +25,18 @@ const Hero = () => {
         <Stories />
           {
             posts.map(post =>{
+              
+
               return(
-                <div key={post.id} className="single-post">
+                <Fade bottom>
+                  <div key={post.id} className="single-post">
             <div className="post-profile"> <Profile name={post.userName} img={post.img}/></div>
 
               <img src={`./assets/${post.img}`}   alt="post" className="image-post"  />
+              {/* <ProgressiveImg imgsrc='./assets/img1.jpg' previewsrc='./assets/img2.jpg'
+               alt='post...' /> */}
+
+
  
               
               <div className="post-details user-data">
@@ -38,7 +51,7 @@ const Hero = () => {
                 <div className="post-caption">
                   <p>
                     <strong> {post.userName}</strong>
-                    <span className="caption-text"> {post.caption}</span>
+                    <span className="caption-text light"> {post.caption}</span>
                   </p>
                 </div>
 
@@ -50,6 +63,7 @@ const Hero = () => {
                 </div>
               </div>
           </div>
+                </Fade>
               )
             })
           }
